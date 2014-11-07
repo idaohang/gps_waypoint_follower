@@ -20,8 +20,8 @@ int main(int argc, char** argv){
     tf::StampedTransform transform;
     try
     {
-        listener.waitForTransform(/current_goal, /current_pose, ros::Time(0), ros::Duration(10.0) );
-        listener.lookupTransform(/current_goal, /current_pose, ros::Time(0), transform);
+        listener.waitForTransform("/current_goal", "/current_pose", ros::Time(0), ros::Duration(10.0) );
+        listener.lookupTransform("/current_goal", "/current_pose", ros::Time(0), transform);
     }
     catch (tf::TransformException ex) 
     {
